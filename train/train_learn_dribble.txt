@@ -1,0 +1,345 @@
+% Running on host: Shyamals-Air
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=0: args[N]=train/train_pos.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=1: args[N]=train/train_neg.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=2: args[N]=train/train_bk.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=3: args[N]=train/train_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+% LoadAllModes() called.  Currently loaded modes: []
+% [ LazyGroundClauseIndex ]  Building full index for sameAs/2 with 2 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for exp/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for log/3.
+% LoadAllLibraries() called.  Currently loaded libraries: [listsInLogic, differentInLogic, modes_arithmeticInLogic, inlines_comparisonInLogic, modes_listsInLogic, inlines_differentInLogic, modes_differentInLogic, arithmeticInLogic, inlines_listsInLogic, modes_comparisonInLogic, comparisonInLogic, inlines_arithmeticInLogic]
+
+%  Read the facts.
+%  Have read 95 facts.
+% Have read 9 examples from 'train' [train/train*].
+% Have read 14 examples from 'train' [train/train*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 female_gender(D)
+%  targetPred:                female_gender/1
+%  targetArgTypes:            signature = [const], types = [+person]
+%  targets:                   [female_gender(D)]
+%  targetPredicates:          [female_gender/1]
+%  targetArgSpecs:            [[D[+person]]]
+%  variablesInTargets:        [[D]]
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 25 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 9 pos examples and 14 neg examples.
+% Time to init learnOneClause: 40 milliseconds
+% Old dirnull
+Setting model dir
+
+% Have 9 'raw' positive examples and kept 9.
+% Have 14 'raw' negative examples and kept 14.
+
+% processing backup's for female_gender
+%  POS EX = 9
+%  NEG EX = 14
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+train/models/
+File: train/advice.txt doesnt exist.Hence no advice loaded
+% Learning 1 trees in this iteration for female_gender
+
+% Learn model for: female_gender
+% Kept 9 of the 9 positive examples.
+% Kept 14 of the 14 negative examples.
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.2381852551984877
+Set score:0.0025
+% Dataset size: 23
+Computing probabilities
+prob time:4 milliseconds
+No hidden examples for : female_gender
+Time to build dataset: 7 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.23818525519848777
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 2 5 10 11 13 14 16 17 18 22
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% LearnOneClause Parameters:
+%   Targets (1):
+%    female_gender(+person)
+%  Modes (47):
+%    actor(+person),
+%    movie(+movie, +person),
+%    movie(+movie, -person),
+%    movie(-movie, +person),
+%    genre(+person, +genre),
+%    genre(+person, #genre),
+%    genre(+person, -genre),
+%    genre(-person, +genre),
+%    workedunder(+person, +person),
+%    workedunder(+person, -person),
+%    workedunder(-person, +person),
+%    addList(+willList, #willNumber),
+%    multiplyList(+willList, #willNumber),
+%    abs(+willNumber, &willNumber),
+%    minus(+willNumber, &willNumber),
+%    minus(+willNumber, +willNumber, &willNumber),
+%    plus(+willNumber, +willNumber, &willNumber),
+%    mult(+willNumber, +willNumber, &willNumber),
+%    div(+willNumber, +willNumber, &willNumber),
+%    allNumbers(+willList),
+%    positiveNumber(+willNumber),
+%    negativeNumber(+willNumber),
+%    in0toDot001(+willNumber),
+%    in0toDot01(+willNumber),
+%    in0toDot1(+willNumber),
+%    in0to1(+willNumber),
+%    in0to10(+willNumber),
+%    in0to100(+willNumber),
+%    in0to1000(+willNumber),
+%    equalWithTolerance(+willNumber, +willNumber, &willNumber),
+%    greaterOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    smallerOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    isaEqualTolerance(+willNumber),
+%    lessThan(+willNumber, +willNumber),
+%    greaterThan(+willNumber, +willNumber),
+%    lessThanOrEqual(+willNumber, +willNumber),
+%    greaterThanOrEqual(+willNumber, +willNumber),
+%    inBetweenOO(+willNumber, +willNumber, +willNumber),
+%    inBetweenCO(+willNumber, +willNumber, +willNumber),
+%    inBetweenOC(+willNumber, +willNumber, +willNumber),
+%    inBetweenCC(+willNumber, +willNumber, +willNumber),
+%    memberOfList(+willAnything, +willList),
+%    firstInList(+willList, &willAnything),
+%    restOfList(+willList, &willList),
+%    positionInList(+willAnything, +willList, &willNumber),
+%    nthInList(+willNumber, +willList, &willAnything),
+%    lengthOfList(+willList, &willNumber)
+
+% target           = female_gender(D)
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.1E-7) for clause:  female_gender(_).  [covers 23.0/23.0 pos, 0.0/0.0 neg]
+% Most-general root: female_gender(_).  [covers 23.0/23.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'female_gender(_).  [covers 23.0/23.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for actor/1 with 17 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for movie/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for genre/2.
+% [ LazyGroundClauseIndex ]  Building full index for workedunder/2 with 46 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for workedunder/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for workedunder/2.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 2 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 2 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0100000000000003E-6) for clause:  female_gender(A) :- actor(A).  [covers 2.0/23.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.12E-6) for clause:  female_gender(A) :- movie(_, A).  [covers 2.0/23.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #1 @ 4:39:46 2/1/18.  [Using 3,430,864 memory cells.]  %%%%%
+
+
+% FOR female_gender(A):
+%   return 0;  // std dev = 0.488, 23.000 (wgt'ed) examples reached here.  /* #neg=14 #pos=9 */
+
+
+% Clauses:
+
+female_gender(A, 0) :- !. // Clause #1.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(underscore, 0) :-  /* #neg=14 #pos=9 */ 
+   !. // Flattened version of clause #1.
+
+
+% The unique flattened literals:
+
+% Saving model in: train/models/bRDNs/female_gender.model.ckpt
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Final call for computing score for female_gender.  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stepLength_tree1(1.0).
+
+logPrior(-1.8).
+female_gender(D, Total) :- // A general accessor. 
+   female_gender(D, 1000000, Total), !.
+female_gender(D, Total) :- waitHere("This should not fail", female_gender(D, Total)).
+
+female_gender(D, TreesToUse, Total) :- // A tree-limited accessor (e.g., for tuning the number of trees to use).
+   logPrior(LogPrior),
+   getScore_female_gender_tree1(D, TreesToUse, Total1),
+   Total is LogPrior + Total1,
+   !.
+female_gender(D, TreesToUse, Total) :- waitHere("This should not fail", female_gender(D, TreesToUse, Total)).
+
+getScore_female_gender_tree1(D, TreesToUse, 0.0) :- 1 > TreesToUse, !.
+getScore_female_gender_tree1(D, TreesToUse, Total1) :- female_gender_tree1(D, Total), stepLength_tree1(StepLen), Total1 is Total * StepLen.
+
+flattenedLiteralsInThisSetOfTrees(0, []).
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.23818525519848777
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 3 6 7 10 11 12 13 16 17 19
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = female_gender(D)
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.1E-7) for clause:  female_gender(_).  [covers 23.0/23.0 pos, 0.0/0.0 neg]
+% Most-general root: female_gender(_).  [covers 23.0/23.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'female_gender(_).  [covers 23.0/23.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 2 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 3 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0100000000000003E-6) for clause:  female_gender(A) :- actor(A).  [covers 2.0/23.0 pos, 0.0/0.0 neg]
+%     Score = -5.382354 (regressionFit = 5.382353, penalties=1.12E-6) for clause:  female_gender(A) :- workedunder(A, _).  [covers 6.0/23.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -5.382354): female_gender(A) :- workedunder(A, _).  [covers 6.0/23.0 pos, 0.0/0.0 neg]
+
+% The best node found: female_gender(A) :- workedunder(A, _).  [covers 6.0/23.0 pos, 0.0/0.0 neg]
+
+% The best node found: female_gender(A) :- workedunder(A, _).  [covers 6.0/23.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: female_gender(A) :- workedunder(A, _).  [covers 6.0/23.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.24999999999999992 to score=0.0025 #egs=6.0
+Comparing variance: 0.2283737024221454 to score=0.0025 #egs=17.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 17.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.228374)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.228374) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 27 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 12
+
+% On cycle #1, the best clause found is:
+%      female_gender(A) :- workedunder(A, _).  [covers 6.0/23.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 0 1 2 3 4 5 7 8 9 10
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = female_gender(D)
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.1E-7) for clause:  female_gender(_).  [covers 17.0/17.0 pos, 0.0/0.0 neg]
+% Most-general root: female_gender(_).  [covers 17.0/17.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'female_gender(_).  [covers 17.0/17.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 2 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 2 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0100000000000003E-6) for clause:  female_gender(A) :- actor(A).  [covers 2.0/17.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.12E-6) for clause:  female_gender(A) :- movie(_, A).  [covers 2.0/17.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (female_gender(D) :- workedunder(D, Anon1135))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree Combined @ 4:39:46 2/1/18.  [Using 1,608,600 memory cells.]  %%%%%
+
+
+% FOR female_gender(A):
+%   if ( workedunder(A, B) )
+%   then return 0.35814893509951223;  // std dev = 1.225, 6.000 (wgt'ed) examples reached here.  /* #neg=3 #pos=3 */
+%   else return 0.21109011157010057;  // std dev = 0.478, 17.000 (wgt'ed) examples reached here.  /* #neg=11 #pos=6 */
+
+
+% Clauses:
+
+female_gender(A, 0.35814893509951223) :- 
+     workedunder(A, B), 
+     !. // Clause #1.
+
+female_gender(A, 0.21109011157010057) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(a, 0.35814893509951223) :-  /* #neg=3 #pos=3 */ 
+   workedunder(a, underscore),
+   !. // Flattened version of clause #1.
+
+flattened_female_gender(underscore, 0.21109011157010057) :-  /* #neg=11 #pos=6 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   workedunder(a, underscore)
+
+% Time taken to learn model for 'female_gender': 342 milliseconds.
+% Saving model in: train/models/bRDNs/female_gender.model
+cached groundings hit: 0
+Misses: 0
+
+% Total learning time (1 trees): 2.429 seconds.
