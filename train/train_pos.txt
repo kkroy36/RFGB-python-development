@@ -1,9 +1,0 @@
-female_gender(adinamerrill).
-female_gender(anicolegrimaudo).
-female_gender(aelliottgould).
-female_gender(accilecassel).
-female_gender(ajurneesmollett).
-female_gender(agretascacchi).
-female_gender(amarksangster).
-female_gender(acynthiastevenson).
-female_gender(amanueladolcemascolo).
