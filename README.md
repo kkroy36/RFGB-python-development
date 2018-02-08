@@ -10,7 +10,7 @@ A. IMDB dataset:
 
 cmd: python main.py -target [female_gender] -samplingratetrain [25]
 
-
+-samplingratetrain : percentage of training data randomly sampled for learning.
 
 1. Copy a classification example from test domains both train and test (ex: Toy Cancer) to same directory as .py files or you can write your own.
 
