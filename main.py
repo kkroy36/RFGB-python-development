@@ -4,6 +4,7 @@ from Utils import Utils
 from Tree import node
 from Boosting import Boosting
 from sys import argv
+from os import system
 
 def main():
     '''main method'''
@@ -21,14 +22,14 @@ def main():
         sampling_rate_test = int(argv[argv.index("-samplingratetest")+1][1:-1])
     for target in targets:
         data = Utils.readTrainingData(target,sampling_rate_train,regression,advice) #read training data
-        numberOfTrees = 1 #number of trees for boosting
+        numberOfTrees = 10 #number of trees for boosting
         trees = [] #initialize place holder for trees
         for i in range(numberOfTrees): #learn each tree and update gradient
             print('='*20,"learning tree",str(i),'='*20)
             node.setMaxDepth(6)
             node.learnTree(data) #learn RRT
-            print ("dot file: ",node.learnedDotFile)
-            exit()
+            #print ("dot file: ",node.learnedDotFile)
+            #exit()
             trees.append(node.learnedDecisionTree)
             Boosting.updateGradients(data,trees)
         for tree in trees:
@@ -37,6 +38,7 @@ def main():
                 print(clause)
         testData = Utils.readTestData(target,sampling_rate_test,regression) #read testing data
         Boosting.performInference(testData,trees) #get probability of test examples
+        system("rm *.pyc")
         #print (testData.pos) #--> uncomment to see test query probabilities (for classification)
         #print (testData.neg)
 
