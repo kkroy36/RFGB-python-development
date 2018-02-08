@@ -1,2 +1,14 @@
+female_gender(adenisarndt).
+female_gender(abrionjames).
+female_gender(aviktordanchenko).
+female_gender(anormanarmour).
+female_gender(atonygoldwyn).
 female_gender(aivangrigorov).
-female_gender(aalancpeterson).
+female_gender(astevekalfa).
+female_gender(ajaimzwoolvett).
+female_gender(afredward).
+female_gender(asalvatorelazzaro).
+female_gender(aneilmaskell).
+female_gender(asydneypollack).
+female_gender(acarmelogalati).
+female_gender(aemilmarkov).

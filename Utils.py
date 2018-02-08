@@ -38,7 +38,7 @@ class Data(object):
         '''set positive examples from pos list'''
         for example in pos:
             if example.split('(')[0] == target:
-                self.pos[example] = 0.5 #set initial gradient to 1-0.5 for positive
+                self.pos[example] = 0.1192 #set initial gradient to 1-0.5 for positive
 
     def setExamples(self,examples,target):
         '''set examples for regression'''
@@ -53,7 +53,7 @@ class Data(object):
         '''set negative examples from neg list'''
         for example in neg:
             if example.split('(')[0] == target:
-                self.neg[example] = -0.5 #set initial gradient to 0-0.5 for negative
+                self.neg[example] = -0.8808 #set initial gradient to 0-0.5 for negative
 
     def setTarget(self,bk,target,regression = False):
         '''sets the target'''

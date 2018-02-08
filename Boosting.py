@@ -6,7 +6,7 @@ import sklearn.metrics as sk
 class Boosting(object):
     '''boosting class'''
     
-    logPrior = log(0.5/float(1-0.5))
+    logPrior = log(0.1192/float(1-0.1192))
 
     @staticmethod
     def computeAdviceGradient(example):
@@ -95,7 +95,7 @@ class Boosting(object):
     def computeResults(testData):
         '''computes accuracy,AUC-ROC and AUC-PR'''
         yactual = [1 for i in range(len(list(testData.pos.values())))] + [0 for i in range(len(list(testData.neg.values())))]
-        ypred = [int(x >= 0.75) for x in list(testData.pos.values())+list(testData.neg.values())]
+        ypred = [int(x >= 0.5) for x in list(testData.pos.values())+list(testData.neg.values())]
         print ("accuracy: ",sk.accuracy_score(yactual,ypred))
         print ("AUC-ROC: ",sk.roc_auc_score(yactual,ypred))
         print ("AUC-PR: ",sk.average_precision_score(yactual,ypred))
@@ -108,7 +108,7 @@ class Boosting(object):
         '''computes probability for test examples'''
         logPrior = Boosting.logPrior
         if not testData.regression:
-            logPrior = log(0.5/float(1-0.5)) #initialize log odds of assumed prior probability for example
+            logPrior = Boosting.logPrior #initialize log odds of assumed prior probability for example
             for example in testData.pos:
                 print ("testing example: ",example)
                 sumOfGradients = Boosting.computeSumOfGradients(example,trees,testData) #compute sum of gradients
