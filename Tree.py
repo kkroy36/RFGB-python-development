@@ -142,7 +142,7 @@ class node(object):
         Utils.addVariableTypes(bestTest) #add variable types of new variables
         self.test = bestTest #assign best test after going through all literal specs
         print("best test found at current node: ",self.test)
-        if self.parent != "root":
+        #if self.parent != "root":
             #node.learnedDotFile.append(self.parent.test+str("->")+self.test)
         if len(bestTExamples) > 0: #if examples still need explaining create left node and add to queue
             self.left = node(None,bestTExamples,Utils.variance(bestTExamples),self.level+1,self,"left")
